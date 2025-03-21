@@ -9,6 +9,7 @@
           "speed": "Speed (0.25 to 4.0, where 1.0 is default)",
           "model": "Model",
           "voice": "Voice",
+          "instructions": "Instructions",
           "url": "Enter an OpenAI-compatible endpoint (optionally include a port number)."
         }
       }
@@ -26,6 +27,7 @@
           "chime_sound": "Chime sound",
           "speed": "Speed (0.25 to 4.0)",
           "voice": "Voice",
+          "instructions": "Instructions",
           "normalize_audio": "Enable loudness for generated audio (uses more CPU)"
         }
       }
