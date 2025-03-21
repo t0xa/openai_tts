@@ -19,6 +19,7 @@ from .const import (
     CONF_MODEL,
     CONF_VOICE,
     CONF_SPEED,
+    CONF_INSTRUCTIONS,
     CONF_URL,
     DOMAIN,
     MODELS,
@@ -171,6 +172,15 @@ class OpenAITTSOptionsFlow(OptionsFlow):
                     "mode": "dropdown",
                     "sort": True,
                     "custom_value": True
+                }
+            }),
+
+            vol.Optional(
+                CONF_INSTRUCTIONS,
+                default=self.config_entry.options.get(CONF_INSTRUCTIONS, self.config_entry.data.get(CONF_INSTRUCTIONS, "Speak in emotive and friendly tone"))
+            ): selector({
+                "text": {
+                    "multiline": True
                 }
             }),
 

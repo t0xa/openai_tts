@@ -18,12 +18,13 @@ class AudioResponse:
         self.content = content
 
 class OpenAITTSEngine:
-    def __init__(self, api_key: str, voice: str, model: str, speed: float, url: str):
+    def __init__(self, api_key: str, voice: str, model: str, speed: float, instructions: str, url: str):
         self._api_key = api_key
         self._voice = voice
         self._model = model
         self._speed = speed
         self._url = url
+        self._instructions = instructions
 
     def get_tts(self, text: str, speed: float = None, voice: str = None) -> AudioResponse:
         """Synchronous TTS request using urllib.request.
@@ -42,6 +43,7 @@ class OpenAITTSEngine:
             "model": self._model,
             "input": text,
             "voice": voice,
+            "instructions": self._instructions,
             "response_format": "mp3",
             "speed": speed
         }

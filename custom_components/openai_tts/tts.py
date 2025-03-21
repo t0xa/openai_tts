@@ -21,6 +21,7 @@ from .const import (
     CONF_SPEED,
     CONF_VOICE,
     CONF_URL,
+    CONF_INSTRUCTIONS,
     DOMAIN,
     UNIQUE_ID,
     CONF_CHIME_ENABLE,
@@ -43,6 +44,7 @@ async def async_setup_entry(
         config_entry.data[CONF_VOICE],
         config_entry.data[CONF_MODEL],
         config_entry.data.get(CONF_SPEED, 1.0),
+        config_entry.data[CONF_INSTRUCTIONS],
         config_entry.data[CONF_URL],
     )
     async_add_entities([OpenAITTSEntity(hass, config_entry, engine)])
