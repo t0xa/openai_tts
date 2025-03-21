@@ -7,10 +7,11 @@ CONF_API_KEY = "api_key"
 CONF_MODEL = "model"
 CONF_VOICE = "voice"
 CONF_SPEED = "speed"
+CONF_INSTRUCTIONS = "instructions"
 CONF_URL = "url"
 UNIQUE_ID = "unique_id"
 
-MODELS = ["tts-1", "tts-1-hd"]
+MODELS = ["tts-1", "tts-1-hd", "gpt-4o-mini-tts"]
 VOICES = ["alloy", "ash", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer"]
 
 CONF_CHIME_ENABLE = "chime"
