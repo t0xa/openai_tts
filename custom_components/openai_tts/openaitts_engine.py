@@ -44,7 +44,7 @@ class OpenAITTSEngine:
             "input": text,
             "voice": voice,
             "instructions": self._instructions,
-            "response_format": "wav",
+            "response_format": "flac",
             "speed": speed
         }
 
