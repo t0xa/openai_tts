@@ -90,6 +90,12 @@ class OpenAITTSConfigFlow(ConfigFlow, domain=DOMAIN):
                 "sort": True,
                 "custom_value": True
             }
+        }),
+        vol.Required(
+            CONF_INSTRUCTIONS, default="Speak in emotive and friendly tone"): selector({
+            "text": {
+                "multiline": True
+            }
         })
     })
 
